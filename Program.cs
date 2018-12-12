@@ -45,7 +45,7 @@ namespace JenkinTestingProg
         [Test]
         public void TestPass()
         {
-            Assert.Pass();
+            Assert.Fail();
 
         }
         [TearDown]
