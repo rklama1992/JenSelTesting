@@ -34,10 +34,16 @@ namespace JenkinTestingProg
 
         }
 
-       // [Test]
-        public void TestFalse()
+        [Test]
+        public void TestCorrect()
         {
             Assert.AreEqual(9, 19);
+
+        }
+        [Test]
+        public void TestPass()
+        {
+            Assert.Pass();
 
         }
     }
