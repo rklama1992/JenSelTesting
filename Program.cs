@@ -19,6 +19,8 @@ namespace JenkinTestingProg
             run.involeBrowser();
 
         }
+
+        [SetUp]
         public void involeBrowser()
         {
             driver = new ChromeDriver();
@@ -37,13 +39,19 @@ namespace JenkinTestingProg
         [Test]
         public void TestCorrect()
         {
-            Assert.AreEqual(9, 19);
+            Assert.AreEqual("Jenkins", "Jenkins");
 
         }
         [Test]
         public void TestPass()
         {
             Assert.Pass();
+
+        }
+        [TearDown]
+        public void closeDriver()
+        {
+            driver.Close();
 
         }
     }
